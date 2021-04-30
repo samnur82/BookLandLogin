@@ -15,7 +15,7 @@ pipeline{
         }
         stage('clone repo') {
             steps {
-               sh 'git pull'
+               sh 'git https://github.com/samnur82/BookLandLogin.git'
             }
         }
         stage('Build Simple Apps War') {
