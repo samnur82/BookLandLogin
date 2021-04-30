@@ -28,14 +28,14 @@ public class DBConnection {
         
         // non docker env
         //String dbURL = "jdbc:mysql://192.168.56.119:3306/";           // using ip
-        //String dbURL = "jdbc:mysql://docker-learning:3306/";            // using hostname
-        //String dbUser = "dbadmin2";             // non docker env
-        //String dbUserPass = "P@ssw0rd1234";     // non docker env
+        String dbURL = "jdbc:mysql://docker-learning:3306/";            // using hostname
+        String dbUser = "dbadmin2";             // non docker env
+        String dbUserPass = "P@ssw0rd1234";     // non docker env
         
         // docker env
-        String dbURL = "jdbc:mysql://appsdb:3306/";
-        String dbUser = "root";                
-        String dbUserPass = "P@ssw0rd1234";      
+        // String dbURL = "jdbc:mysql://appsdb:3306/";
+        // String dbUser = "root";                
+        // String dbUserPass = "P@ssw0rd1234";      
         
         Class.forName(dbDriver);
         Connection dbConn = DriverManager.getConnection(dbURL + dbName + "?serverTimezone=UTC", dbUser, dbUserPass);
