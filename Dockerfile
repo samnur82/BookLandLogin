@@ -5,4 +5,4 @@ FROM tomcat:jdk8-openjdk
 COPY dist/BookLandLogin.war /usr/local/tomcat/webapps/
 
 # start the apps container
-CMD ["catalina.sh", "run"
+CMD ["catalina.sh", "run"]
