@@ -27,7 +27,7 @@ pipeline{
             steps{
 	 	script {
                     //dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                    dockerImage = docker.build("${registry}:$BUILD_NUMBER","--no-cache")
+                    dockerImage = docker.build("${registry}:$BUILD_NUMBER","--no-cache .")
 		}
             }
         }
