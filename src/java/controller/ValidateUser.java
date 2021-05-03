@@ -90,9 +90,10 @@ public class ValidateUser extends HttpServlet {
                                     // if username and password valid
                                     //request.getRequestDispatcher("http://localhost:8080/BookLandMainPage/MainBookLand.jsp").forward(request, response);
                          
-                                    //response.sendRedirect("http://appsmainpage:8082/BookLandMain/MainPage.jsp");
                                     //response.sendRedirect("http://localhost:8080/BookLandMain/MainPage.jsp");
-                                    response.sendRedirect("http://appsmainpage:9002/BookLandMain/MainPage.jsp");
+                                    //response.sendRedirect("http://appsmainpage:9002/BookLandMain/MainPage.jsp");
+                                    response.sendRedirect("http://jenkins.fitraalim.com:9002/BookLandMain/MainPage.jsp");
+                                    
                                 }else {
                                     request.setAttribute("error", "invalid username/password");
                                     request.getRequestDispatcher("/Login.jsp").forward(request, response);

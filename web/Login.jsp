@@ -35,8 +35,8 @@
                 </tr>
                  <tr>
                      <!-- <td colspan="2" class="align-middle" center><a href="http://localhost:8080/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td> -->
-                     <!-- <td colspan="2" class="align-middle" center><a href="http://appsregis:8081/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td> -->
-                     <td colspan="2" class="align-middle" center><a href="http://appsregis:9001/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td>
+                     <!-- <td colspan="2" class="align-middle" center><a href="http://appsregis:9001/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td> -->
+                     <td colspan="2" class="align-middle" center><a href="http://jenkins.fitraalim.com:9001/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td>
                 </tr>
                 <tr>
                     <td colspan="2" class="align-middle" center><span class="error">${error}</span></td>
