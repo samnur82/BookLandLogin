@@ -20,6 +20,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashSet;
+import java.util.Set;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -63,10 +65,11 @@ public class ValidateUser extends HttpServlet {
                    request.setAttribute("error", "null value is prohibited");
                    request.getRequestDispatcher("/Login.jsp").forward(request, response);
                }else {
-                                   
-                    // sanitize user input
+                         
+                    // sanitize user input and set session attribute
                     // ( additional function for Login images 0.2 ) 
                     try {
+                        
                         UserInput userData = new UserInput();                       
                         userData.setDisplayName(username);
                         
@@ -86,9 +89,10 @@ public class ValidateUser extends HttpServlet {
                                 if(rs.next()){
                                     // if username and password valid
                                     //request.getRequestDispatcher("http://localhost:8080/BookLandMainPage/MainBookLand.jsp").forward(request, response);
-                                    response.sendRedirect("http://localhost:8080/BookLandMain/MainPage.jsp");
+                         
                                     //response.sendRedirect("http://appsmainpage:8082/BookLandMain/MainPage.jsp");
-                                    //response.sendRedirect("http://appsmainpage:8087/BookLandMain/MainPage.jsp");
+                                    //response.sendRedirect("http://localhost:8080/BookLandMain/MainPage.jsp");
+                                    response.sendRedirect("http://appsmainpage:8092/BookLandMain/MainPage.jsp");
                                 }else {
                                     request.setAttribute("error", "invalid username/password");
                                     request.getRequestDispatcher("/Login.jsp").forward(request, response);
@@ -118,17 +122,17 @@ public class ValidateUser extends HttpServlet {
                                     printOut.println(err.getMessage());
                                 }
                             }
+                             
                         }else{
                             request.setAttribute("error", "only letters, numbers, hypen and underscore are allowed for username");
                             request.getRequestDispatcher("/Login.jsp").forward(request, response);
                         }
-                        
+                           
                     }
-                    catch(IOException | ServletException err){
+                    catch(Exception err){
                             printOut.println(err.getMessage());
-                    } 
+                    }           
                }
             }
         }
-    
 }
