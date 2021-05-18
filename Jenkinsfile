@@ -26,7 +26,7 @@ pipeline{
         stage('Build BookLandLogin Docker Image') {
             steps{
 	 	script {
-                    //dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    // dockerImage = docker.build registry + ":$BUILD_NUMBER"
                     dockerImage = docker.build("${registry}:login2-$BUILD_NUMBER","--no-cache .")
 		}
             }
@@ -41,7 +41,7 @@ pipeline{
 		script {
                     docker.withRegistry( '', registryCred) {
 			dockerImage.push()
-                        dockerImage.push('latest')
+                        // dockerImage.push('latest')
                     }
 		}
 	    }
