@@ -92,7 +92,7 @@ public class ValidateUser extends HttpServlet {
                          
                                     //response.sendRedirect("http://localhost:8080/BookLandMain/MainPage.jsp");
                                     //response.sendRedirect("http://appsmainpage:9002/BookLandMain/MainPage.jsp");
-                                    response.sendRedirect("http://jenkins.fitraalim.com:9002/BookLandMain/MainPage.jsp");
+                                    response.sendRedirect("http://jenkins.fitraalim.com:9012/BookLandMain/MainPage.jsp");
                                     
                                 }else {
                                     request.setAttribute("error", "invalid username/password");
