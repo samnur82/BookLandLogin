@@ -15,7 +15,7 @@ pipeline{
         }
         stage('clone repo') {
             steps {
-               sh 'git pull https://github.com/samnur82/booklandlogin.git master'
+               sh 'git pull https://github.com/samnur82/booklandlogin.git login2'
             }
         }
         stage('Build BookLandLogin War') {
@@ -27,7 +27,7 @@ pipeline{
             steps{
 	 	script {
                     //dockerImage = docker.build registry + ":$BUILD_NUMBER"
-                    dockerImage = docker.build("${registry}:$BUILD_NUMBER","--no-cache .")
+                    dockerImage = docker.build("${registry}:login2-$BUILD_NUMBER","--no-cache .")
 		}
             }
         }
@@ -48,7 +48,7 @@ pipeline{
         }
         stage('Cleaning up local repo') { 
             steps { 
-                sh "docker rmi $registry:$BUILD_NUMBER" 
+                sh "docker rmi $registry:login2-$BUILD_NUMBER" 
             }
         }    
     }
