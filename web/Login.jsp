@@ -40,6 +40,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" class="align-middle" center><span class="error">${error}</span></td>
+                    <td colspan="2" class="align-middle" center><span hidden>booklandlogin2</span></td>
                 </tr>
             </tbody>
           </table>
