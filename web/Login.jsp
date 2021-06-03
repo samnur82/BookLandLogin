@@ -20,7 +20,7 @@
           <table class="table">
             <tbody>
                 <tr>
-                    <td colspan="2" class="pb-3"><h1>Login</h1></td>
+                    <td colspan="2" class="pb-3"><h1>Login User</h1></td>
                 </tr>
                 <tr>
                     <td class="align-middle">username</td>
