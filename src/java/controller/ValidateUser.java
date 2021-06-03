@@ -64,7 +64,12 @@ public class ValidateUser extends HttpServlet {
                    // if null, redirect user to login page
                    request.setAttribute("error", "null value is prohibited");
                    request.getRequestDispatcher("/Login.jsp").forward(request, response);
-               }else {
+               }
+               else if(CheckInjection.isJsInject(username) || CheckInjection.isJsInject(password)){
+                   request.setAttribute("error", "Javascript Injection Detected!");
+                   request.getRequestDispatcher("/Login.jsp").forward(request, response);
+               }
+               else {
                          
                     // sanitize user input and set session attribute
                     // ( additional function for Login images 0.2 ) 

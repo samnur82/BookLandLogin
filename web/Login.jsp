@@ -34,7 +34,7 @@
                     <td colspan="2" class="align-middle" center><input class="btn btn-outline-info btn-lg btn-block" type="submit" value="submit"></td>
                 </tr>
                  <tr>
-                     <!-- <td colspan="2" class="align-middle" center><a href="http://localhost:8080/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td> -->
+                     <!-- <td colspan="2" class="align-middle" center><a href="http://localhost:9000/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td> -->
                      <!-- <td colspan="2" class="align-middle" center><a href="http://appsregis:9001/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td> -->
                      <td colspan="2" class="align-middle" center><a href="http://jenkins.fitraalim.com:9001/BookLandRegistration/Registration.jsp">Don't have an account? Register Here</a></td>
                 </tr>
