@@ -77,6 +77,9 @@ public class ValidateUser extends HttpServlet {
                     // ( additional function for Login images 0.2 ) 
                     try {
                         
+                        // add delay 4s for testing purpose
+                        Thread.sleep(4000);
+                        
                         UserInput userData = new UserInput();                       
                         userData.setDisplayName(username);
                         
